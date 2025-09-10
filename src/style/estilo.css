@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 180vh;
+    padding: 30px;
+    color: #f0f0f0;
+}
+.contenedor {
+    display: flex;
+    gap: 30px;
+    width: 500px;
+    max-width: 100%;
+    flex-wrap: wrap;
+}
+.top header {
+    background-color: #1f1f2e;
+    color: #fffa;
+    padding: 25px;
+    border-radius: 14px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+.filtro, .principal {
+    border-radius: 14px;
+    padding: 40px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+.filtro {
+    background-color: #1a1a2e;
+    width: 400px;
+}
+.lista li {
+    list-style: none;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.lista button, #cajitaAgregar, .tarea button {
+    border: none;
+    border-radius: 110px;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+.lista button, #cajitaAgregar {
+    width: 100%;
+    padding: 11px;
+    background-color: #3b3b5e;
+    color: #fff;
+    font-weight: 600;
+}
+.lista button:hover, #cajitaAgregar:hover {
+    background-color: #56568a;
+}
+.principal {
+    flex: 1;
+    background-color: #1d1d33;
+}
+#cajitaTexto {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #444;
+    margin-bottom: 12px;
+    background-color: #2b2b44;
+    color: #eee;
+}
+#resultado {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.tarea {
+    padding: 16px;
+    background-color: #2f2f56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #6384b5;
+    border-radius: 8px;
+}
+.tarea.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+    border-left-color: #aaa;
+}
+.tarea-nombre {
+    flex: 1;
+    margin-left: 12px;
+    color: #fff;
+}
+.tarea-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color:#6384b5;
+    cursor: pointer;
+}
+.tarea button {
+    padding: 7px 14px;
+    background-color: #6384b5;
+    color: #fff;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+.tarea button:hover {
+    background-color: #6384b5;
+}
+.cont-filtros {
+    display: flex;
+    width: 85%;
+    gap: 25px;
+}
