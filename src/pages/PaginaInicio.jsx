@@ -7,22 +7,36 @@ import ListaTareas from '../components/ListaTareas'
 
 function PaginaInicio() {
     const [tareas, setTareas] = useState([])
+    const [filtro, setFiltro] = useState("todas")
 
-    useEffect(() => {
-        async function fetchTareas() {
+const fetchTareas = async () => {
+        try {
             const data = await getData("tareas")
             setTareas(data)
+        } catch (error) {
+            console.error("Error al cargar tareas:", error)
         }
-        fetchTareas()
-    }, [])
-    return (     
+    }
+    
+    useEffect(() => {
+        fetchTareas();
+    }, [tareas]);
+
+    const tareasFiltradas = tareas.filter(tarea => {
+        if (filtro === "todas") return true
+        return tarea.estado === filtro
+
+    });
+    return (
         <div>
 
             <Inicio />
             <div className='cont-filtros'>
-                <InputTarea />
-                <Filtros />
-                <ListaTareas tareas={tareas}  />
+                <InputTarea actualizarTareas={fetchTareas}/>
+                <Filtros onFiltroChange={setFiltro} />
+                <ListaTareas tareas={tareasFiltradas} 
+                filtro={filtro} 
+                actualizarTareas={fetchTareas}/>
             </div>
         </div>
     )

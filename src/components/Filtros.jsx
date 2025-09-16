@@ -1,19 +1,36 @@
 import React from 'react'
 
-function Filtros() {
+function Filtros({onFiltroChange}) {
     return (
         <div className="contenedor">
             <div className="filtro">
                 <h2>FILTROS</h2>
                 <ul className="lista">
                     <li>
-                        <input id="cajitaCompletada" type="checkbox" />Completada
+                        <input
+                            id="cajitaCompletada"
+                            type="radio"
+                            name="filtro"
+                            onChange={() => onFiltroChange("completada")}
+                        />Completada
                     </li>
                     <li>
-                        <input id="cajitaPendiente" type="checkbox" />Pendientes
+                      <input
+                            id="cajitaPendiente"
+                            type="radio"
+                            name="filtro"
+                            onChange={() => onFiltroChange("pendiente")}
+                        />Pendientes
                     </li>
                     <li>
-                        <button id="botonFiltrar">Filtrar</button>
+                        <input
+                            id="cajitaTodas"
+                            type="radio"
+                            name="filtro"
+                            defaultChecked
+                            onChange={() => onFiltroChange("todas")}
+                        />Todas
+
                     </li>
                 </ul>
             </div>

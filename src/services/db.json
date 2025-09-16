@@ -1,8 +1,28 @@
 {
   "tareas": [
     {
-      "id": "36de",
-      "nombre": "hola",
+      "id": "66e9",
+      "nombre": "adios",
+      "estado": "completada"
+    },
+    {
+      "id": "346e",
+      "nombre": "bye",
+      "estado": "completada"
+    },
+    {
+      "id": "0263",
+      "nombre": "hiiiiiiiiiiiiii",
+      "estado": "completada"
+    },
+    {
+      "id": "8767",
+      "nombre": "a",
+      "estado": "pendiente"
+    },
+    {
+      "id": "6b5c",
+      "nombre": "asa",
       "estado": "pendiente"
     }
   ]
